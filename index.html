@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jornal História do Paraná</title>
+
+<style>
+body{
+margin:0;
+font-family: Arial, sans-serif;
+background:#f4f4f4;
+color:#222;
+scroll-behavior:smooth;
+}
+
+header{
+background:#1b5e20;
+color:white;
+padding:15px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:10;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+display:none;
+padding:20px;
+max-width:1000px;
+margin:auto;
+background:white;
+min-height:90vh;
+}
+
+section.active{
+display:block;
+}
+
+.hero{
+text-align:center;
+background:#2e7d32;
+color:white;
+padding:40px;
+}
+
+.card{
+background:#eee;
+padding:10px;
+margin:10px 0;
+border-radius:8px;
+}
+
+.botao{
+margin-top:20px;
+}
+
+button{
+padding:10px;
+background:#1b5e20;
+color:white;
+border:none;
+cursor:pointer;
+margin:5px;
+}
+
+button:hover{
+background:#145a18;
+}
+
+h2{
+border-left:5px solid #1b5e20;
+padding-left:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📰 Jornal História do Paraná</h1>
+
+<nav>
+<a onclick="show(0)">Capa</a>
+<a onclick="show(1)">Africanos</a>
+<a onclick="show(2)">Imigração</a>
+<a onclick="show(3)">Migrantes</a>
+<a onclick="show(4)">Guerras</a>
+<a onclick="show(5)">Economia</a>
+</nav>
+</header>
+
+<!-- CAPA -->
+<section class="active">
+
+<div class="hero">
+<h2>O PARANÁ QUE VOCÊ NÃO CONHECE</h2>
+<p>Uma viagem pela nossa história</p>
+</div>
+
+<h2>Editorial</h2>
+<p>
+Este jornal apresenta a formação histórica do Paraná, destacando povos,
+migrações, conflitos e ciclos econômicos.
+</p>
+
+<h2>Destaques</h2>
+
+<div class="card">Africanos e escravidão</div>
+<div class="card">Imigração europeia e asiática</div>
+<div class="card">Migrantes brasileiros</div>
+<div class="card">Guerras históricas</div>
+<div class="card">Ciclos econômicos</div>
+
+<h2>Curiosidade</h2>
+<div class="card">
+O censo de 1798 indicava grande presença de população escravizada no Paraná.
+</div>
+
+</section>
+
+<!-- AFRICANOS -->
+<section>
+
+<h2>Povos Africanos no Paraná</h2>
+
+<p>
+A presença africana foi essencial na formação econômica e cultural do estado.
+</p>
+
+<div class="card">
+Trabalho nas fazendas, erva-mate e gado.
+</div>
+
+<div class="card">
+Culinária, religião e música como herança cultural.
+</div>
+
+<div class="card">
+No século XIX, milhares de pessoas eram escravizadas no Paraná.
+</div>
+
+<h3>Consciência Negra</h3>
+<p>
+Em cidades como Curitiba, documentos históricos preservam a memória da escravidão.
+</p>
+
+<div class="card">
+Igreja do Rosário dos Pretos representa resistência cultural e religiosa.
+</div>
+
+</section>
+
+<!-- IMIGRAÇÃO -->
+<section>
+
+<h2>Imigração no Paraná</h2>
+
+<p>
+Poloneses, italianos, alemães, ucranianos e japoneses ajudaram a formar o estado.
+</p>
+
+<div class="card">Influência na agricultura</div>
+<div class="card">Arquitetura europeia</div>
+<div class="card">Cultura e festas típicas</div>
+
+<h3>Cidades importantes</h3>
+
+<div class="card">Curitiba</div>
+<div class="card">Londrina</div>
+<div class="card">Maringá</div>
+<div class="card">Paranaguá</div>
+
+</section>
+
+<!-- MIGRANTES -->
+<section>
+
+<h2>Migrantes Brasileiros</h2>
+
+<p>
+Gaúchos, paulistas, mineiros e nordestinos migraram para o Paraná.
+</p>
+
+<div class="card">
+Expansão do café no norte do estado.
+</div>
+
+<div class="card">
+Terra roxa favoreceu agricultura.
+</div>
+
+</section>
+
+<!-- GUERRAS -->
+<section>
+
+<h2>Guerras do Paraná</h2>
+
+<div class="card">
+Revolução Federalista (1893-1895) — Cerco da Lapa
+</div>
+
+<div class="card">
+Guerra do Contestado (1912-1916)
+</div>
+
+<div class="card">
+Conflitos por terra e poder político
+</div>
+
+</section>
+
+<!-- ECONOMIA -->
+<section>
+
+<h2>Ciclos Econômicos</h2>
+
+<div class="card">Erva-mate: ouro verde</div>
+<div class="card">Madeira: araucária</div>
+<div class="card">Café: expansão agrícola</div>
+<div class="card">Geada de 1975: crise econômica</div>
+
+</section>
+
+<script>
+function show(index){
+let sections = document.querySelectorAll("section");
+sections.forEach(s => s.classList.remove("active"));
+sections[index].classList.add("active");
+}
+</script>
+
+</body>
+</html>
